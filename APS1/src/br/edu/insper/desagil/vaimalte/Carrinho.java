@@ -17,7 +17,7 @@ public class Carrinho {
 	public List<Pedido> adiciona(Produto produto) {
 		for (Pedido existente : carrinho) {
 			if (existente.getProduto().equals(produto)) {
-				pedido.incrementa(pedido.getQuantidade());
+				existente.incrementa(existente.getQuantidade());
 			}
 		}
 		pedido = new Pedido(produto);
