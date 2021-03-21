@@ -25,9 +25,9 @@ public class Pedido {
 
 	public double calcula(){
 		double total;
-		double preco=this.produto.getPreco();
-		
+		double preco=this.produto.getPreco();		
 		total = this.quantidade * preco;
+		
 		return total;
 	}
 }

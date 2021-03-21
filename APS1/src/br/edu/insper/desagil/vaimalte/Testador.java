@@ -10,6 +10,7 @@ public class Testador {
 	
 	public boolean testeA() {
 		double total=teste.somaTotal(carteste);
+		
 		if (total==0) {
 			return true;
 		}
@@ -23,9 +24,8 @@ public class Testador {
 		if (total==1.5) {
 			return true;
 		}	
-		else{
-			return false;
-		}
+		return false;
+		
 	}
 
 	public boolean testeC() {
@@ -43,14 +43,12 @@ public class Testador {
 		carteste.adiciona(pera);
 		carteste.adiciona(banana);
 		carteste.adiciona(banana);
-		teste.colocaDesconto(pera,50);
-		
+		teste.colocaDesconto(pera,50);		
 		double total=teste.somaTotal(carteste);
 		
 		if (total==24.75){
 			return true;
-		}
-		
+		}		
 		return false;
 	}
 
@@ -58,8 +56,7 @@ public class Testador {
 		carteste.adiciona(pera);
 		carteste.adiciona(banana);
 		carteste.adiciona(banana);
-		teste.colocaDesconto(banana, 50);
-		
+		teste.colocaDesconto(banana, 50);		
 		double total=teste.somaTotal(carteste);
 		
 		if (total==13.5){
