@@ -2,28 +2,32 @@ package br.edu.insper.desagil.vaimalte;
 
 public class Pedido {
 	private Produto produto;
-	private int quantidade = 1;
+	private int quantidade;
 	
 	public Pedido(Produto produto) {
 		super();
 		this.produto = produto;
+		this.quantidade=1;
 	}
 
 	public Produto getProduto() {
-		return produto;
+		return this.produto;
 	}
 
 	public int getQuantidade() {
-		return quantidade;
+		return this.quantidade;
 	}
 	
-	public int incrementa(int quantidade){
-		quantidade += 1;
-		return quantidade;
+	public void incrementa(){
+		this.quantidade ++;
+		return;
 	}
 
-	public float calcula(int quantidade, Produto produto) {
-		float total = quantidade * produto.getPreco();
+	public double calcula(){
+		double total;
+		double preco=this.produto.getPreco();
+		
+		total = this.quantidade * preco;
 		return total;
 	}
 }

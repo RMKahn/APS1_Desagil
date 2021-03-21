@@ -1,30 +1,29 @@
 package br.edu.insper.desagil.vaimalte;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Carrinho {
 	private List<Pedido> carrinho;
-	private Pedido pedido;
 
 	public Carrinho() {
 		super();
+		this.carrinho= new ArrayList<>();
 	}
 
 	public List<Pedido> getPedidos() {
-		return carrinho;
-	}
+		return this.carrinho;
+	}	
 	
-	public List<Pedido> adiciona(Produto produto) {
+	public void adiciona(Produto produto) {
 		for (Pedido existente : carrinho) {
-			if (existente.getProduto().equals(produto)) {
-				existente.incrementa(existente.getQuantidade());
+			if (existente.getProduto().getCodigo()==produto.getCodigo()) {
+				existente.incrementa();
+				return;
 			}
 		}
-		pedido = new Pedido(produto);
+		Pedido pedido = new Pedido(produto);
 		carrinho.add(pedido);
-		
-		return carrinho;
-		
 	}
 
 }

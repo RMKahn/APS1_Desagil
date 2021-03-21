@@ -21,6 +21,7 @@ class TestadorTest {
 
 	@Test
 	public void testeB() {
+
 	    assertTrue(t.testeB());
 	}
 
